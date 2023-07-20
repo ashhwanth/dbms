@@ -1,0 +1,36 @@
+-- create database insurance
+ --  use insurance;
+-- create table person(driver_id int,name varchar(20),address varchar(100))
+-- create table car(licence int,model varchar(20),year int)
+-- create table accident(report_no int,date date,location varchar(20))
+-- create table participated(report_no int,licence int,driver_id int,damage_amount int)
+-- create table owns(driver_id int,licence int)
+-- alter table person add constraint primary key (driver_id)
+-- alter table car add constraint primary key (licence)
+-- alter table accident add constraint primary key (report_no)
+-- alter table owns add constraint primary key (driver_id,licence)
+-- alter table participated add constraint primary key (report_no,licence)
+-- alter table participated add constraint f_repo_key foreign key (driver_id) references person(driver_id)
+-- alter table participated add constraint f_report_key foreign key (report_no) references accident(report_no)
+-- alter table participated add constraint f_licn_key foreign key (licence) references car(licence)
+-- alter table owns add constraint f_driver_key foreign key (driver_id) references person(driver_id)
+-- alter table owns add constraint f_lice_key foreign key (licence) references car(licence)
+-- alter table car rename to vehicle
+-- alter table accident change column report_no  report_number  int
+-- alter table person add column gender varchar(20);
+-- alter table accident drop column location
+-- alter table participated modify damage_amount numeric(10,3)
+-- insert into person values(1003,'ram','394 newyork','male'),(1002,'Perera','324 paris','male');
+ -- insert into vehicle values(100213,'swift',2020),(100112,'innova',2019)
+ -- (wrong syntax)insert into accident values(124554,'19-10-2020'),(124555,'16-11-2020')
+  -- insert into accident values(120354,'2020-10-19'),(120354,'2019-11-20')
+  -- insert into owns value(1003,100213)
+  -- insert into owns value(1003,100112)
+-- insert into participated values(120355,100213,1003,4569.5),(120354,100112,1002,4899.5)
+ -- insert into person values(1004,'FREDRICK','394 Washington','male'),(1005,'Albert','324 Sydney','male');
+ -- insert into vehicle values(100214,'scorpio',2021),(100113,'i20',2019),(100115,'thar',2016);
+ -- (wrong syntax)insert into accident values(124554,'19-10-2020'),(124555,'16-11-2020')
+ -- insert into accident values(120356,'2021-08-12'),(120357,'2023-01-10'),(120358,'2022-09-10');
+  -- insert into owns value(1004,100214);
+--  insert into owns values(1005,100113),(1005,100115);
+-- insert into participated values(120356,100214,1003,45469.5),(120357,100113,1004,18899.5),(120358,100115,1005,19899.5);
