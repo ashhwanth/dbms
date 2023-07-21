@@ -1,4 +1,4 @@
-CREATE TABLE `store`.`product` ( `pdtid` INT NOT NULL , `pName` VARCHAR(150) NOT NULL , `price` DOUBLE NOT NULL , `quantity` INT NOT NULL , PRIMARY KEY (`pdtid`)) ENGINE = InnoDB;
+CREATE TABLE `store`.`product` ( `pdtid` INT NOT NULL , `pName` VARCHAR(150) NOT NULL , `price` DOUBLE NOT NULL , `quantity` INT NOT NULL , PRIMARY KEY (`pdtid`));
 
 USE `store`;
 DROP procedure IF EXISTS `insertproduct1`;
