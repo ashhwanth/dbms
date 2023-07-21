@@ -13,3 +13,4 @@ end if;
 END$$
 
 DELIMITER ;
+call insertproduct1('1001','pen','30','300');
